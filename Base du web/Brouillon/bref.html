@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ma Plateforme</title>
+  <!-- Inclure les styles CSS pour la mise en forme -->
+  <style>
+    /* Styles pour le menu déroulant */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ma Plateforme</h1>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <!-- Options du menu déroulant -->
+      <a href="#tableau-de-bord">Tableau de bord</a>
+      <a href="#notes">Notes</a>
+      <a href="#retards-absences">Retards et Absences</a>
+      <a href="#arrieres-paiement">Arriérés de paiement</a>
+      <a href="#profil">Profil</a>
+      <a href="#aide-support">Aide ou Support</a>
+    </div>
+  </div>
+
+  <!-- Contenu dynamique pour chaque section -->
+  <div id="tableau-de-bord">
+    <h2>Tableau de bord</h2>
+    <!-- Contenu de la section Tableau de bord -->
+  </div>
+  <div id="notes">
+    <h2>Notes</h2>
+    <!-- Contenu de la section Notes -->
+  </div>
+  <div id="retards-absences">
+    <h2>Retards et Absences</h2>
+    <!-- Contenu de la section Retards et Absences -->
+  </div>
+  <div id="arrieres-paiement">
+    <h2>Arriérés de paiement</h2>
+    <!-- Contenu de la section Arriérés de paiement -->
+  </div>
+  <div id="profil">
+    <h2>Profil</h2>
+    <!-- Contenu de la section Profil -->
+  </div>
+  <div id="aide-support">
+    <h2>Aide ou Support</h2>
+    <!-- Contenu de la section Aide ou Support -->
+  </div>
+</body>
+</html>

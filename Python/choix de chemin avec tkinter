@@ -1,0 +1,16 @@
+from tkinter import filedialog
+import tkinter as tk
+
+# Création de la fenêtre principale
+root = tk.Tk()
+root.withdraw()  # Masquer la fenêtre principale
+
+# Demander à l'utilisateur de sélectionner un chemin de fichier/dossier
+selected_path = filedialog.askdirectory()  # Pour sélectionner un dossier
+# selected_path = filedialog.askopenfilename()  # Pour sélectionner un fichier
+
+# Afficher le chemin sélectionné
+print("Chemin sélectionné :", selected_path)
+
+# Fermer la fenêtre
+root.destroy()

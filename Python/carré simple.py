@@ -1,0 +1,16 @@
+import turtle
+window= turtle.Screen()
+window.title("Dessin d'un carré avec turtle")
+t1=turtle.Turtle()
+longueur=55
+t1.fd(longueur)
+t1.left(90)
+t1.color("red")
+t1.fd(longueur)
+t1.left(90)
+t1.color("blue")
+t1.fd(longueur)
+t1.left(90)
+t1.color("yellow")
+t1.fd(longueur)
+window.exitonclick()

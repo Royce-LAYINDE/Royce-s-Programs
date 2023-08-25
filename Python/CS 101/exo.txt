@@ -1,0 +1,66 @@
+
+CS 101:
+-------------
+Exercice 1:
+trouver les index de deux nombres dans un tableau qui, additionnés, donnent un certain objectif.
+
+Exercice 2:
+Vérifiez si une chaîne de caractères donnée est un palindrome (se lit de la même manière de gauche à droite et de droite à gauche). Proposez 4 solutions.
+
+Exercice 3:
+Suppression des doublons : Supprimez les doublons d'un tableau donné et renvoyez la longueur du tableau résultant. Proposez 3 solutions
+
+Exercice 4:
+Carré parfait : Déterminez si un nombre donné est un carré parfait. On rappelle qu'un nombre parfait est un entier naturel égal à la moitié de la somme de ses diviseurs ou encore à la somme de ses diviseurs stricts.
+
+Exercice 5:
+Ecrire une fonction qui prend en paramètre un tableau d'entiers, et compte combien de fois chaque élément apparaît dans le tableau. Proposez deux solutions.
+
+Exercice 6:
+Ecrire une fonction qui prend en paramètre une chaine de caractère et renvoie la chaine de caractère inversée. Proposez 3 solutions.
+
+Exercice 7:
+Ecrire une procédure qui prend en paramètre un nombre n et ensuite, calcule la somme de tous les nombres de 1 à n. Le résultat sera écrit dans un fichier texte.
+
+Exercice 8:
+Anagrammes : Vérifiez si deux chaînes de caractères données sont des anagrammes (elles contiennent les mêmes caractères dans un ordre différent). Proposez 3 solutions.
+
+Exercice 9:
+Compteur de bits : Écrire une fonction qui compte le nombre de 1 dans la représentation binaire d'un nombre donné.
+
+Exercice 10:
+Fusion de deux tableaux triés: Ecrire une fonction qui prend en paramètre 2 tableaux contenant des entiers triés. La fonction devra fusionner les deux tableaux triés en un seul tableau trié.
+
+Exercice 11:
+Triangle de Pascal : Générez les n premières lignes du triangle de Pascal.
+
+Exercice 12:
+Ecrire une fonction qui dit si un nombre est un palindrome. Proposez deux solutions.
+
+Exercice 13:
+Ecrire une fonction qui prend en paramètre une phrase. La fonction devra trouver la longueur du dernier mot dans cette phrase et écrire le resultat dans un fichier texte.
+
+Exercice 14:
+Sous-chaîne de somme maximale : Trouvez la sous-chaîne non vide ayant la plus grande somme dans un tableau donné.
+
+Exercice 15:
+Rotation de tableau : Faites pivoter un tableau d'entiers donné à droite par k positions.
+
+Exercice 16
+Ecrire une fonction qui prend en paramètre un tableau de nombres entiers et trouve le nombre manquant dans ce tableau. On precise que le tableau contient tous les nombres de 1 à n, sauf un. On précise que n est le nombre le plus grand dans le tableau. Proposez deux solutions.
+
+
+Exercice 17:
+Validation d'une parenthèse : Vérifiez si une chaîne de caractères contenant des parenthèses est valide (les parenthèses sont correctement fermées).
+
+Exercice 18:
+Ecrire une fonction qui prend en paramètres deux tableaux d'entiers et renvoie l'intersection des deux tableaux: trouve les éléments communs à deux tableaux donnés. Proposez deux solutions.
+
+Exercice 19:
+Ecrier une fonction qui pren en paramètre un tableau (une liste de liste). La fonction devra renvoyer le nombre de chemins uniques: calculer le nombre de chemins uniques du coin supérieur gauche au coin inférieur droit de la grille grille de "m" lignes et "n" colonnes.
+
+Exercice 20:
+Plus long préfixe commun : Trouvez le plus long préfixe commun parmi un ensemble de chaînes de caractères données.
+
+Exercice 21:
+Convertissez un nombre romain donné en nombre entier

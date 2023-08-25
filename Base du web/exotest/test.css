@@ -1,0 +1,155 @@
+body{
+    background-color: gray;
+}
+.parent {
+    margin-left: 40%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+   
+}
+.child1 {
+    position: absolute;
+    translate: 5vh 5vh;
+    width: 50%;
+    height: 50%;
+    background: red;
+}
+.child2 {
+    z-index: 3;
+    translate: 14.5vh 19vh;
+   margin: 20px;
+    background: green;
+}
+.child3 {
+    z-index: 2;
+    translate: 3vh 5vh;
+   margin: 60px;
+    background: blue;
+}
+.BJ{
+   float: left;
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+.BVert{
+    position: absolute;
+    
+    width: 40%;
+    height: 100%;
+    background: green;
+}
+.BJaune{
+    position: absolute;
+    margin-left: 40%;
+    
+    width: 60%;
+    height: 50%;
+    background: yellow;
+}
+.BRouge{
+    position: absolute;
+    margin-left: 40%;
+   top: 50%;
+    
+    width: 60%;
+    height: 50%;
+    background: red;
+}
+.FR{
+    float: right;
+    align-content: flex-end;
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+.FBleu{
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    background: blue;
+}
+.FBlanc{
+    position: absolute;
+    margin-left: 33.33%;
+    width: 33.33%;
+    height: 100%;
+    background: white;
+}
+.FRouge{
+    position: absolute;
+    margin-left: 66.66%;
+    width: 33.33%;
+    height: 100%;
+    background: red;
+}
+.CIV{
+    float: left;
+    margin-top: 2rem;
+     position: relative;
+     width: 300px;
+     height: 200px;
+ }
+ .Orange{
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    background: orange;
+}
+.FBlanc{
+    position: absolute;
+    margin-left: 33.33%;
+    width: 33.33%;
+    height: 100%;
+    background: white;
+}
+.FVert{
+    position: absolute;
+    margin-left: 66.66%;
+    width: 33.33%;
+    height: 100%;
+    background: green;
+}
+.N{
+    float: right;
+    margin-top: 2rem;
+    align-content: flex-end;
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+.NVert{
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    background: green;
+}
+.GB{
+    float: left;
+    margin-top: 0rem;
+    margin-left: 40%;
+     position: relative;
+     width: 300px;
+     height: 200px;
+}
+
+.GBVert{
+
+    background: green;
+    height: 33.33%;
+    width: 100%;
+}
+.GBJaune{
+    background: yellow;
+    height: 33.33%;
+    width: 100%;
+
+}
+.GBBleu{
+    background: blue;
+    height: 33.33%;
+    width: 100%;
+
+
+}
