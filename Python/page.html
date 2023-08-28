@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en-us">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <title>
+   Chapitre 1: La Danse Enchantée de la Tortue : Découvrir la Magie de Python avec Turtle | RoyLab: Code &amp; Web
+  </title>
+  <meta content="width=device-width,minimum-scale=1" name="viewport"/>
+  <meta content="Vous êtes-vous déjà demandé ce que ressent une tortue lorsqu'elle trace son chemin sur le sable? Le module Turtle en Python vous permet d'explorer cette expérience en donnant vie à une tortue numérique. Imaginez que vous la guidez avec des mots, lui demandant d'avancer, de tourner et de créer des dessins fascinants. Découvrez comment importer ce module, créer votre propre tortue virtuelle et la laisser parcourir des chemins enchantés sur votre écran." name="description"/>
+  <meta content="Hugo 0.85.0" name="generator">
+   <meta content="noindex, nofollow" name="robots"/>
+   <link href="/ananke/css/main.min.css" rel="stylesheet"/>
+   <meta content="Chapitre 1: La Danse Enchantée de la Tortue : Découvrir la Magie de Python avec Turtle" property="og:title">
+    <meta content="Vous êtes-vous déjà demandé ce que ressent une tortue lorsqu'elle trace son chemin sur le sable? Le module Turtle en Python vous permet d'explorer cette expérience en donnant vie à une tortue numérique. Imaginez que vous la guidez avec des mots, lui demandant d'avancer, de tourner et de créer des dessins fascinants. Découvrez comment importer ce module, créer votre propre tortue virtuelle et la laisser parcourir des chemins enchantés sur votre écran." property="og:description">
+     <meta content="article" property="og:type">
+      <meta content="/fr/first/" property="og:url">
+       <meta content="fr" property="article:section"/>
+       <meta content="2023-08-18T10:58:08-04:00" property="article:published_time"/>
+       <meta content="2023-08-18T10:58:08-04:00" property="article:modified_time"/>
+       <meta content="Chapitre 1: La Danse Enchantée de la Tortue : Découvrir la Magie de Python avec Turtle" itemprop="name"/>
+       <meta content="Vous êtes-vous déjà demandé ce que ressent une tortue lorsqu'elle trace son chemin sur le sable? Le module Turtle en Python vous permet d'explorer cette expérience en donnant vie à une tortue numérique. Imaginez que vous la guidez avec des mots, lui demandant d'avancer, de tourner et de créer des dessins fascinants. Découvrez comment importer ce module, créer votre propre tortue virtuelle et la laisser parcourir des chemins enchantés sur votre écran." itemprop="description"/>
+       <meta content="2023-08-18T10:58:08-04:00" itemprop="datePublished">
+        <meta content="2023-08-18T10:58:08-04:00" itemprop="dateModified">
+         <meta content="1860" itemprop="wordCount"/>
+         <meta content="python," itemprop="keywords">
+          <meta content="summary" name="twitter:card"/>
+          <meta content="Chapitre 1: La Danse Enchantée de la Tortue : Découvrir la Magie de Python avec Turtle" name="twitter:title"/>
+          <meta content="Vous êtes-vous déjà demandé ce que ressent une tortue lorsqu'elle trace son chemin sur le sable? Le module Turtle en Python vous permet d'explorer cette expérience en donnant vie à une tortue numérique. Imaginez que vous la guidez avec des mots, lui demandant d'avancer, de tourner et de créer des dessins fascinants. Découvrez comment importer ce module, créer votre propre tortue virtuelle et la laisser parcourir des chemins enchantés sur votre écran." name="twitter:description"/>
+         </meta>
+        </meta>
+       </meta>
+      </meta>
+     </meta>
+    </meta>
+   </meta>
+  </meta>
+ </head>
+ <body class="ma0 avenir bg-near-white">
+  <header class="cover bg-top" style="background-image: url('/images/tortue.png');">
+   <div class="bg-black-60">
+    <nav class="pv3 ph3 ph4-ns" role="navigation">
+     <div class="flex-l justify-between items-center center">
+      <a class="f3 fw2 hover-white no-underline white-90 dib" href="/">
+       RoyLab: Code &amp; Web
+      </a>
+      <div class="flex-l items-center">
+       <ul class="pl0 mr3">
+        <li class="list f5 f4-ns fw4 dib pr3">
+         <a class="hover-white no-underline white-90" href="/fr/post/apropos/" title="A propos page">
+          A propos
+         </a>
+        </li>
+        <li class="list f5 f4-ns fw4 dib pr3">
+         <a class="hover-white no-underline white-90" href="/fr/" title="Articles page">
+          Articles
+         </a>
+        </li>
+        <li class="list f5 f4-ns fw4 dib pr3">
+         <a class="hover-white no-underline white-90" href="/fr/post/contact/" title="Contact page">
+          Contact
+         </a>
+        </li>
+       </ul>
+       <div class="ananke-socials">
+        <a aria-label="follow on LinkedIn——Opens in a new window" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" href="https://www.linkedin.com/in/malick-layinde-825a78257/" rel="noopener" target="_blank" title="LinkedIn link">
+         <span class="icon">
+          <svg style="enable-background:new 0 0 65 65;" version="1.1" viewbox="0 0 65 65" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;">
+           </path>
+          </svg>
+         </span>
+         <span class="new-window">
+          <svg height="8px" style="enable-background:new 0 0 1000 1000;" version="1.1" viewbox="0 0 1000 1000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;">
+           </path>
+          </svg>
+         </span>
+        </a>
+        <a aria-label="follow on GitHub——Opens in a new window" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" href="https://github.com/Royce-LAYINDE" rel="noopener" target="_blank" title="GitHub link">
+         <span class="icon">
+          <svg style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z">
+           </path>
+          </svg>
+         </span>
+         <span class="new-window">
+          <svg height="8px" style="enable-background:new 0 0 1000 1000;" version="1.1" viewbox="0 0 1000 1000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;">
+           </path>
+          </svg>
+         </span>
+        </a>
+        <a aria-label="follow on Medium——Opens in a new window" class="medium ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" href="https://medium.com/@layinderoyce" rel="noopener" target="_blank" title="Medium link">
+         <span class="icon">
+          <svg style="enable-background:new 0 0 170 170;" version="1.1" viewbox="0 0 170 170" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <path d="M46.5340803,65.2157554 C46.6968378,63.6076572 46.0836,62.018231 44.8828198,60.93592 L32.6512605,46.2010582 L32.6512605,44 L70.6302521,44 L99.9859944,108.380952 L125.794585,44 L162,44 L162,46.2010582 L151.542017,56.2281011 C150.640424,56.9153477 150.193188,58.0448862 150.380019,59.1628454 L150.380019,132.837155 C150.193188,133.955114 150.640424,135.084652 151.542017,135.771899 L161.755369,145.798942 L161.755369,148 L110.38282,148 L110.38282,145.798942 L120.963119,135.527337 C122.002801,134.487948 122.002801,134.182246 122.002801,132.592593 L122.002801,73.0417402 L92.585901,147.755438 L88.6106443,147.755438 L54.3622782,73.0417402 L54.3622782,123.115814 C54.0767278,125.221069 54.7759199,127.3406 56.2581699,128.863022 L70.0186741,145.55438 L70.0186741,147.755438 L31,147.755438 L31,145.55438 L44.7605042,128.863022 C46.2319621,127.338076 46.8903838,125.204485 46.5340803,123.115814 L46.5340803,65.2157554 Z" style="fill-rule:evenodd;clip-rule:evenodd;">
+           </path>
+          </svg>
+         </span>
+         <span class="new-window">
+          <svg height="8px" style="enable-background:new 0 0 1000 1000;" version="1.1" viewbox="0 0 1000 1000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;">
+           </path>
+          </svg>
+         </span>
+        </a>
+       </div>
+      </div>
+     </div>
+    </nav>
+    <div class="tc-l pv6 ph3 ph4-ns">
+    </div>
+   </div>
+  </header>
+  <main class="pb7" role="main">
+   <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+     <header>
+      <h1 class="f1">
+       Chapitre 1: La Danse Enchantée de la Tortue : Découvrir la Magie de Python avec Turtle
+      </h1>
+     </header>
+     <div class="nested-copy-line-height lh-copy f4 nested-links mid-gray">
+      <p>
+       <em>
+        Temps de Lecture Estimé: Environ 7 à 10 minutes
+       </em>
+      </p>
+      <h2 id="table-des-matières">
+       Table des matières
+      </h2>
+      <ul>
+       <li>
+        <a href="#1">
+         La Magie du Démarrage : Importer Turtle
+        </a>
+       </li>
+       <li>
+        <a href="#2">
+         Création de l’Environnement : Initialisation de la Fenêtre
+        </a>
+       </li>
+       <li>
+        <a href="#3">
+         Donner un Nom Magique : Titre de la Fenêtre
+        </a>
+       </li>
+       <li>
+        <a href="#4">
+         L’Incantation : Création de l’Instance Turtle
+        </a>
+       </li>
+       <li>
+        <a href="#5">
+         Chaque Pas est une Étape : Les Commandes de Base
+        </a>
+       </li>
+       <li>
+        <a href="#6">
+         Exploration Créative : Dessiner des Figures Géométriques
+        </a>
+       </li>
+       <li>
+        <a href="#7">
+         Changer d’Encre : Personnaliser les Couleurs et l’Épaisseur
+        </a>
+       </li>
+       <li>
+        <a href="#8">
+         Exploration de l’Apparence : Personnaliser la Tortue
+        </a>
+       </li>
+       <li>
+        <a href="#9">
+         Retour sur Mon Expérience à la Séance d’Initiation
+        </a>
+       </li>
+       <li>
+        <a href="#10">
+         Conclusion Enchanteur : La Création sans Limites
+        </a>
+       </li>
+      </ul>
+      <p>
+       L’univers de la programmation peut sembler intimidant pour les débutants, mais il existe des moyens ludiques et créatifs pour introduire les concepts de base. Récemment, j’ai eu le privilège d’être l’un des intervenants lors d’une séance d’initiation à la programmation organisée par le
+       <a href="https://dit.sn/">
+        Dakar Institute of Technology
+       </a>
+       . Parmi toutes les notions abordées au cours de cette semaine passionnante, l’expérience de découvrir le module Turtle en Python a été particulièrement enrichissante. Cette semaine, je t’invite donc à explorer cet outil étonnant, qui ouvre la voie à la création artistique en langage Python. Prépare-toi à embarquer pour un voyage où les figures géométriques prennent vie et où les courbes deviennent des œuvres d’art.
+       <br/>
+       <!-- raw HTML omitted -->
+       <em>
+        A vos baguettes, prêts ? Incantations !
+       </em>
+       <!-- raw HTML omitted -->
+      </p>
+      <h1 id="le-module-turtle-en-python--une-aventure-graphique">
+       Le Module Turtle en Python : Une Aventure Graphique
+      </h1>
+      <p>
+       Imaginez une feuille de papier virtuelle où une tortue numérique peut se déplacer et dessiner en suivant vos commandes. Voilà en quoi consiste le module Turtle en Python. Cette approche graphique permet aux débutants de visualiser en temps réel comment les instructions de programmation se traduisent en mouvements et en dessins.
+      </p>
+      <h1 id="1">
+       La Magie du Démarrage : Importer Turtle
+      </h1>
+      <p>
+       Comme tout bon enchanteur, notre aventure commence par la préparation. Avant de faire danser notre tortue, il faut invoquer sa présence en important le module Turtle. Voici comment tu peux faire :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e">#Importation de turtle</span>
+<span style="color:#f92672">import</span> turtle
+</code></pre>
+      </div>
+      <h1 id="2">
+       Création de l’Environnement : Initialisation de la Fenêtre
+      </h1>
+      <p>
+       Chaque magicien a besoin de son propre espace pour réaliser ses tours. De même, notre tortue a besoin de sa propre fenêtre pour dessiner. Voici comment créer la fenêtre d’opération :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e">#Initialisation de la fenetre</span>
+window<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Screen()
+</code></pre>
+      </div>
+      <h1 id="3">
+       Donner un Nom Magique : Titre de la Fenêtre
+      </h1>
+      <p>
+       Comme tout bon magicien, notre tortue a besoin d’une entrée grandiose. Donnons-lui un titre fascinant pour sa scène de création :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e">#Donnons un nom à notre fenetre</span>
+window<span style="color:#f92672">.</span>title(<span style="color:#e6db74">"L'Art Enchanté de Tracé avec Turtle"</span>)
+</code></pre>
+      </div>
+      <h1 id="4">
+       L’Incantation : Création de l’Instance Turtle
+      </h1>
+      <p>
+       Avant de faire apparaître notre tortue, nous devons la créer. C’est comme invoquer un familier dans le monde magique. Voici comment créer une instance de tortue avec laquelle nous allons interagir :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e">#Creation d'une instance de turtle</span>
+t<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Turtle()
+</code></pre>
+      </div>
+      <h1 id="5">
+       Chaque Pas est une Étape : Les Commandes de Base
+      </h1>
+      <p>
+       Chaque pas de notre tortue est une étape vers la création. Tout comme
+       <a href="https://padlet-uploads.storage.googleapis.com/293762411/99453da9e54e6ce8ea76d6dd46671e11/Harry_Potter_et_la_Coupe_de_Feu___J_K_ROWLING.pdf">
+        Viktor Krum, a utilisé sa baguette pour faire danser Hermione
+       </a>
+       , nous faisons danser notre tortue avec des commandes simples. Voici quelques-unes des commandes de base pour faire bouger notre tortue :
+      </p>
+      <p>
+       -Pour faire avancer la tortue sur une certaine distance, on utilise la commande suivante:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Faire avancer le curseur de 50px</span>
+t<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">50</span>)
+</code></pre>
+      </div>
+      <p>
+       Une alternative à cette commande est tout simplement:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+</code></pre>
+      </div>
+      <p>
+       -Pour faire reculer la tortue sur une certaine distance, on utilise la commande suivante:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Faire avancer le curseur de 50px</span>
+t<span style="color:#f92672">.</span>backward(<span style="color:#ae81ff">50</span>)
+</code></pre>
+      </div>
+      <p>
+       De même, on peut aussi ecrire:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t<span style="color:#f92672">.</span>bk(<span style="color:#ae81ff">50</span>)
+</code></pre>
+      </div>
+      <p>
+       Ainsi donc, pour faire avancer ou reculer notre tortue, il suffit de faire respectivement appel aux méthodes .fd() et .bk() et de mettre en argument, la distance qu’on veut qu’elle parcourt.
+      </p>
+      <p>
+       <em>
+        NB: Remarque que la distance sur laquelle on fait bouger le curseur s’exprime en
+        <a href="https://fr.wikipedia.org/wiki/Pixel">
+         pixel(px)
+        </a>
+       </em>
+      </p>
+      <p>
+       -Pour faire tourner la tortue vers la gauche d’un certain angle, on utilise la commande suivante:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Faire dévier  le curseur à gauche de 60°</span>
+t<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">60</span>)
+</code></pre>
+      </div>
+      <p>
+       Une alternative à cette commande est tout simplement:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">60</span>)
+</code></pre>
+      </div>
+      <p>
+       -Pour faire tourner la tortue vers la droite d’un certain angle, on utilise la commande suivante:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Faire dévier  le curseur à droite de 45°</span>
+t<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">45</span>)
+</code></pre>
+      </div>
+      <p>
+       De même, on peut aussi ecrire:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t<span style="color:#f92672">.</span>rt(<span style="color:#ae81ff">45</span>)
+</code></pre>
+      </div>
+      <p>
+       Ainsi donc, pour faire tourner notre tortue à gauche ou à droite, il suffit de faire respectivement appel aux méthodes .lt() et .rt() et de mettre en argument la mesure de l’angle(en degré) dont-on veut qu’elle dévie.
+      </p>
+      <p>
+       En somme, en utilisant ces commandes simples pour faire avancer, reculer, tourner à gauche ou à droite, notre tortue répond à nos instructions pour créer des mouvements enchanteurs.
+      </p>
+      <h1 id="6">
+       Exploration Créative : Dessiner des Figures Géométriques
+      </h1>
+      <p>
+       Maintenant que nous maîtrisons les bases, plongeons dans l’art de la création géométrique ! Notre tortue peut dessiner bien plus que des lignes droites. En combinant les mouvements que nous avons appris, nous pouvons créer des figures géométriques fascinantes. Voici quelques exemples pour te donner un aperçu de ce que tu peux accomplir :
+      </p>
+      <h2 id="dessiner-un-carré-magique--">
+       Dessiner un Carré Magique  :
+      </h2>
+      <p>
+       Utilisons notre tortue pour dessiner un carré. Cela peut sembler simple, mais c’est un premier pas vers des créations plus complexes. Voici comment tu peux faire en tant qu’apprenti mage :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+window<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Screen()
+window<span style="color:#f92672">.</span>title(<span style="color:#e6db74">"Tracé de carré avec turtle"</span>)
+t<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Turtle()
+<span style="color:#75715e">#--------------------</span>
+<span style="color:#75715e">#Méthode1</span>
+t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">90</span>)
+t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">90</span>)
+t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">90</span>)
+t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">90</span>)
+<span style="color:#75715e">#---------------------</span>
+<span style="color:#75715e">#Ferme la fenetre graphique quand je clique dessus</span>
+window<span style="color:#f92672">.</span>exitonclick()
+</code></pre>
+      </div>
+      <p>
+       Avec ce code, tu auras assurément un carré à la sortie. En effet, on demande à notre tortue d’avancer de 50px puis de tourner à gauche d’un angle de 90°. On répète le geste trois autres fois en plus.
+Par contre, il existe une autre manière de réecrire ce code.
+       <em>
+        Attention, voici le moment d’invoquer les boucles temporelles grâce à nos pouvoirs de mage !
+       </em>
+      </p>
+      <p>
+       En effet, grâce aux boucles en Python, il nous est possible de répéter une action un certain nombre de fois
+       <em>
+        (Quelle sorcellerie…)
+       </em>
+      </p>
+      <p>
+       On pourrait donc écrire en lieu et place du précédent code;
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#--------------------</span>
+<span style="color:#75715e">#Méthode2</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">4</span>):
+    t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+    t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">90</span>)
+<span style="color:#75715e">#---------------------</span>
+</code></pre>
+      </div>
+      <p>
+       Ou bien;
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#--------------------</span>
+<span style="color:#75715e">#Méthode3</span>
+a<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">while</span> a<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">4</span>:
+    t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+    t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">90</span>)
+    a<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+<span style="color:#75715e">#---------------------</span>
+</code></pre>
+      </div>
+      <p>
+       Si tu es un jeune
+       <em>
+        apprenti mage
+       </em>
+       et que tu n’as pas encore appris le sort d’invocation des boucles , pas de panique, clique
+       <a href="https://courspython.com/boucles.html">
+        ici
+       </a>
+       , pour en apprendre un peu plus en attendant que je publie mon
+       <em>
+        grimoire sur la magie des boucles
+       </em>
+       .
+      </p>
+      <h2 id="créer-un-triangle-enchanté-">
+       Créer un Triangle Enchanté :
+      </h2>
+      <p>
+       Passons au niveau supérieur en dessinant un triangle. En combinant les mouvements de notre tortue, nous pouvons créer une figure à trois côtés. Voici comment procéder :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+window<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Screen()
+window<span style="color:#f92672">.</span>title(<span style="color:#e6db74">"Tracé d'un triangle avec turtle"</span>)
+t<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Turtle()
+<span style="color:#75715e">#--------------------</span>
+<span style="color:#75715e">#Méthode1</span>
+t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">80</span>)
+t<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">120</span>)
+t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">80</span>)
+t<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">120</span>)
+t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">80</span>)
+t<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">120</span>)
+<span style="color:#75715e">#---------------------</span>
+<span style="color:#75715e">#Ferme la fenetre graphique quand je clique dessus</span>
+window<span style="color:#f92672">.</span>exitonclick()
+</code></pre>
+      </div>
+      <p>
+       Ou mieux encore;
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+    t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">80</span>)
+    t<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">120</span>) 
+</code></pre>
+      </div>
+      <p>
+       NB: Remarque ici qu’on fait tourner notre curseur de 120° vers la gauche. En effet, le triangle ici tracé est un triangle équilatéral et donc ses angles mesurent tous 60°. Cependant, pour obtenir exactement cet angle, il faudrait que l’on tourne notre curseur de 120°(180°-60°), c’est-à-dire de l’angle suplémentaire à notre angle de 60°.
+      </p>
+      <p>
+       <img alt="Image d’exemple" src="/images/angle.jpg"/>
+      </p>
+      <p>
+       Ici donc, il nous faut faire parcourir l’angle en bleu afin de pouvoir obtenir l’angle en jaune dans notre triangle.
+      </p>
+      <p>
+       Bravo
+       <em>
+        jeune apprenti(e)
+       </em>
+       te voilà maintenant capable de Créer des Triangles enchantés à l’infini. Découvrons ensemble d’autres sorts que tu peux apprendre sur Turtle.
+      </p>
+      <h1 id="7">
+       Changer d’Encre : Personnaliser les Couleurs et l’Épaisseur
+      </h1>
+      <p>
+       La magie opère non seulement dans les formes que nous dessinons, mais aussi dans les couleurs que nous utilisons. Avec Turtle, nous pouvons changer la couleur du tracé en utilisant des noms de couleurs prédéfinis ou des codes hexadécimaux. Voici comment tu peux le faire :
+      </p>
+      <h2 id="invoquer-une-couleur-magique-">
+       Invoquer une Couleur Magique :
+      </h2>
+      <p>
+       Utilisons des couleurs pour donner vie à nos dessins. Voici comment changer la couleur du tracé :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Changer la couleur du tracé en rouge</span>
+t<span style="color:#f92672">.</span>pencolor(<span style="color:#e6db74">"red"</span>)
+</code></pre>
+      </div>
+      <p>
+       Grâce à la méthode .pencolor(), tu pourras donner une couleur à ton tracé
+NB: En Python, les incantations sont à prononcer en anglais alors le nom de ta couleur doit être en anglais(“blue”,“red”,“yellow”…)
+      </p>
+      <h2 id="épaissir-le-tracé-enchanté-">
+       Épaissir le Tracé Enchanté :
+      </h2>
+      <p>
+       Modifions l’épaisseur du tracé pour donner une nouvelle dimension à nos créations. Voici comment le faire :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Épaissir le tracé</span>
+t<span style="color:#f92672">.</span>pensize(<span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># Épaisseur de 3 pixels</span>
+</code></pre>
+      </div>
+      <h1 id="8">
+       Exploration de l’Apparence : Personnaliser la Tortue
+      </h1>
+      <p>
+       Notre tortue numérique peut également subir une métamorphose visuelle. Nous pouvons changer son apparence en modifiant sa forme, sa couleur et bien plus encore. Voici comment rendre notre tortue encore plus captivante :
+      </p>
+      <p>
+       Changer la Forme Enchantée : Transformons notre tortue en une créature encore plus magique. Utilisons une forme prédéfinie ou même une image personnalisée comme sa nouvelle apparence :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Changer la forme du curseur en "tortue" </span>
+t<span style="color:#f92672">.</span>shape(<span style="color:#e6db74">"turtle"</span>)
+</code></pre>
+      </div>
+      <p>
+       Avec cette ligne de code tu pourras voir une vraie
+       <em>
+        petite tortue magique
+       </em>
+       comme curseur.
+      </p>
+      <h2 id="un-peu-de-remplissage--lart-du-coloriage">
+       Un Peu de Remplissage : L’Art du Coloriage
+      </h2>
+      <p>
+       Parfois, un simple contour ne suffit pas. Notre tortue peut également remplir les formes qu’elle crée.Apportons de la couleur à notre tortue pour qu’elle se distingue dans son voyage créatif. Pour définir la couleur de remplissage, utilisez la commande fillcolor suivie du nom de la couleur en anglais.
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Définir la couleur de remplissage en bleu</span>
+t<span style="color:#f92672">.</span>fillcolor(<span style="color:#e6db74">"blue"</span>)
+</code></pre>
+      </div>
+      <p>
+       Ensuite, pour commencer à remplir une forme, utilisez la commande begin_fill, et pour arrêter le remplissage, utilisez la commande end_fill :
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t<span style="color:#f92672">.</span>begin_fill()   <span style="color:#75715e">#Commencer à remplir la forme</span>
+<span style="color:#75715e">#Notre code de tracé ici</span>
+<span style="color:#75715e">#...</span>
+t<span style="color:#f92672">.</span>end_fill()     <span style="color:#75715e">#Arrêter le remplissage</span>
+</code></pre>
+      </div>
+      <p>
+       A titre illustratif, l’invocation d’un carré magique coloré devrait ressembler à celui-ci:
+      </p>
+      <div class="highlight">
+       <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+window<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Screen()
+window<span style="color:#f92672">.</span>title(<span style="color:#e6db74">"Tracé d'un triangle avec turtle"</span>)
+t<span style="color:#f92672">=</span> turtle<span style="color:#f92672">.</span>Turtle()
+<span style="color:#75715e">#-------------------- </span>
+t<span style="color:#f92672">.</span>shape(<span style="color:#e6db74">"turtle"</span>)    <span style="color:#75715e"># Changer la forme du curseur en "tortue"</span>
+t<span style="color:#f92672">.</span>fillcolor(<span style="color:#e6db74">"blue"</span>)   <span style="color:#75715e">#Définir la couleur de remplissage en bleu</span>
+t<span style="color:#f92672">.</span>begin_fill()  <span style="color:#75715e">#Commencer à remplir la forme</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">4</span>):
+    t<span style="color:#f92672">.</span>fd(<span style="color:#ae81ff">50</span>)
+    t<span style="color:#f92672">.</span>lt(<span style="color:#ae81ff">90</span>)
+t<span style="color:#f92672">.</span>end_fill()     <span style="color:#75715e">#Arrêter le remplissage</span>
+<span style="color:#75715e">#---------------------</span>
+<span style="color:#75715e">#Ferme la fenetre graphique quand je clique dessus</span>
+window<span style="color:#f92672">.</span>exitonclick()
+</code></pre>
+      </div>
+      <h1 id="9">
+       Retour sur Mon Expérience à la Séance d’Initiation
+      </h1>
+      <p>
+       Lors de la séance d’initiation au DIT, j’ai utilisé le module Turtle pour captiver l’attention des jeunes bacheliers. Les sourires d’émerveillement se dessinaient sur leurs visages lorsqu’ils ont vu la tortue numérique tracer des motifs sous leur contrôle. Nous avons créé des lignes, des triangles et même des étoiles en utilisant des boucles et des commandes Turtle simples.
+      </p>
+      <p>
+       Parmi les moments mémorables, certains étudiants ont décidé de laisser libre cours à leur créativité en créant des dessins personnalisés avec le module Turtle. Cette expérience a montré que la programmation ne se limite pas à des lignes de code, mais peut être une forme d’expression artistique.
+      </p>
+      <h1 id="10">
+       Conclusion Enchanteur : La Création sans Limites
+      </h1>
+      <p>
+       Avec ces connaissances, vous avez tout ce dont vous avez besoin pour plonger dans le monde magique du tracé avec Turtle en Python. Chaque ligne de code devient une baguette magique pour votre tortue numérique, donnant vie à des formes et à des couleurs. Que vous créiez des motifs abstraits ou des dessins géométriques, l’art du tracé Turtle n’a pas de limites. Incantez vos idées, laissez votre tortue danser et explorez les infinies possibilités de création artistique offertes par Python et Turtle.
+      </p>
+      <p>
+       <strong>
+        La Magie Continue
+       </strong>
+      </p>
+      <p>
+       <em>
+        Ne laisse pas ta baguette magique rouillée
+       </em>
+      </p>
+      <p>
+       <a href="https://docs.python.org/3/library/turtle.html">
+        Renforce ton savoir
+       </a>
+      </p>
+      <p>
+       <a href="https://www.frederic-junier.org/PythonSeconde/Python_Seconde_Parc/tortue/tortue2.html">
+        Découvre
+       </a>
+      </p>
+      <p>
+       Consulte les tutoriels en ligne pour des idées de projets amusants.
+      </p>
+      <p>
+       🧙‍♂️🔮🌐
+      </p>
+      <h6 id="que-chaque-ligne-de-code-devienne-une-baguette-magique-et-que-chaque-projet-soit-une-œuvre-enchanteresse">
+       <em>
+        Que chaque ligne de code devienne une baguette magique, et que chaque projet soit une œuvre enchanteresse.
+       </em>
+      </h6>
+      <h6 id="à-bientôt-pour-plus-de-découvertes-et-de-créations-magiques-">
+       À bientôt pour plus de découvertes et de créations magiques !
+      </h6>
+      <h6 id="votre-anchanteur">
+       <em>
+        Votre anchanteur,
+       </em>
+      </h6>
+      <p>
+       M.Royce
+      </p>
+     </div>
+    </article>
+   </div>
+  </main>
+  <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+   <div class="flex justify-between">
+    <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/">
+     ©  RoyLab: Code &amp; Web 2023
+    </a>
+    <div>
+     <div class="ananke-socials">
+      <a aria-label="follow on LinkedIn——Opens in a new window" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" href="https://www.linkedin.com/in/malick-layinde-825a78257/" rel="noopener" target="_blank" title="LinkedIn link">
+       <span class="icon">
+        <svg style="enable-background:new 0 0 65 65;" version="1.1" viewbox="0 0 65 65" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;">
+         </path>
+        </svg>
+       </span>
+       <span class="new-window">
+        <svg height="8px" style="enable-background:new 0 0 1000 1000;" version="1.1" viewbox="0 0 1000 1000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;">
+         </path>
+        </svg>
+       </span>
+      </a>
+      <a aria-label="follow on GitHub——Opens in a new window" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" href="https://github.com/Royce-LAYINDE" rel="noopener" target="_blank" title="GitHub link">
+       <span class="icon">
+        <svg style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z">
+         </path>
+        </svg>
+       </span>
+       <span class="new-window">
+        <svg height="8px" style="enable-background:new 0 0 1000 1000;" version="1.1" viewbox="0 0 1000 1000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;">
+         </path>
+        </svg>
+       </span>
+      </a>
+      <a aria-label="follow on Medium——Opens in a new window" class="medium ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" href="https://medium.com/@layinderoyce" rel="noopener" target="_blank" title="Medium link">
+       <span class="icon">
+        <svg style="enable-background:new 0 0 170 170;" version="1.1" viewbox="0 0 170 170" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <path d="M46.5340803,65.2157554 C46.6968378,63.6076572 46.0836,62.018231 44.8828198,60.93592 L32.6512605,46.2010582 L32.6512605,44 L70.6302521,44 L99.9859944,108.380952 L125.794585,44 L162,44 L162,46.2010582 L151.542017,56.2281011 C150.640424,56.9153477 150.193188,58.0448862 150.380019,59.1628454 L150.380019,132.837155 C150.193188,133.955114 150.640424,135.084652 151.542017,135.771899 L161.755369,145.798942 L161.755369,148 L110.38282,148 L110.38282,145.798942 L120.963119,135.527337 C122.002801,134.487948 122.002801,134.182246 122.002801,132.592593 L122.002801,73.0417402 L92.585901,147.755438 L88.6106443,147.755438 L54.3622782,73.0417402 L54.3622782,123.115814 C54.0767278,125.221069 54.7759199,127.3406 56.2581699,128.863022 L70.0186741,145.55438 L70.0186741,147.755438 L31,147.755438 L31,145.55438 L44.7605042,128.863022 C46.2319621,127.338076 46.8903838,125.204485 46.5340803,123.115814 L46.5340803,65.2157554 Z" style="fill-rule:evenodd;clip-rule:evenodd;">
+         </path>
+        </svg>
+       </span>
+       <span class="new-window">
+        <svg height="8px" style="enable-background:new 0 0 1000 1000;" version="1.1" viewbox="0 0 1000 1000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;">
+         </path>
+        </svg>
+       </span>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
