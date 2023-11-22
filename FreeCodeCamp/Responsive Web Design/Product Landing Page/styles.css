@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+#header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#nav-bar {
+    background-color: #2980b9;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+h2 {
+    color: #3498db;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email,
+#submit {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#submit {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #2980b9;
+}
+
+#visit-site {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#visit-site:hover {
+    background-color: #2980b9;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #header {
+        padding: 15px;
+    }
+
+    #nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #video {
+        margin: 10px auto;
+    }
+
+    form {
+        width: 80%;
+    }
+}

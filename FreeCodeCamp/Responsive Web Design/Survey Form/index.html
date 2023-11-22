@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulaire d'enquête RoyLab: Code & Web</title>
+</head>
+
+<body>
+    <div id="main-container">
+        <h1 id="title">Formulaire d'enquête RoyLab: Code & Web</h1>
+        <p id="description">Merci de prendre le temps de nous aider à améliorer le site</p>
+        <form action="https://register-demo.freecodecamp.org" method="post" id="survey-form">
+            <fieldset>
+                <label for="name" id="name-label">Nom <input type="text" name="name" id="name"
+                        placeholder="Entrez votre nom" required></label>
+                <label for="email" id="email-label">Email <input type="email" name="email" id="email"
+                        placeholder="Entrez votre email" required></label>
+                <label for="number" id="number-label">Âge (optionnel) <input type="number" name="number" id="number" max="99"
+                        min="10" placeholder="Âge"></label>
+                <label for="dropdown" id="dropdown-label">Quelle est votre profession?</label>
+                <select name="dropdown" id="dropdown" required>
+                    <option value="" selected disabled>Sélectionnez une option</option>
+                    <option value="student">Étudiant</option>
+                    <option value="job">Emploi à plein temps</option>
+                    <option value="learner">Apprenant à plein temps</option>
+                    <option value="not-to-say">Préfère ne pas dire</option>
+                    <option value="other">Autre</option>
+                </select>
+                <legend class="p-like-label">Présentation</legend>
+            </fieldset>
+            <fieldset>
+                <p class="p-like-label">Recommanderiez-vous RoyLab à un ami?</p>
+                <div class="checkbox-container">
+                    <input type="radio" name="recommendation" id="definitely" value="Certainement" checked>
+                    <label for="definitely"> Certainement</label>
+                    <input type="radio" name="recommendation" id="maybe" value="Peut-être">
+                    <label for="maybe"> Peut-être</label>
+                    <input type="radio" name="recommendation" id="notsure" value="Pas sûr">
+                    <label for="notsure"> Pas sûr</label>
+                </div>
+
+                <label for="dropdown-two">Quelle est votre article préférée de RoyLab: Code & Web?</label>
+                <select name="dropdown-two" id="dropdown-two">
+                    <option value="" disabled selected>Sélectionnez une option</option>
+                    <option value="un">Chapitre I</option>
+                    <option value="deux">Chapitre II</option>
+                    <option value="trois">Chapitre III</option>
+                    <option value="quatre">Chapitre IV</option>
+                </select>
+                <legend class="p-like-label">Appréciations</legend>
+                <label for="dropdown-two">De quel sujet voudriez-vous que RoyLab: Code & Web aborde dans son prochain article?</label>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="front-end-projects" id="front-end-projects" value="fr"> Visualisation avec Ramchart et Plotly
+                    <input type="checkbox" name="back-end-projects" id="back-end-projects" value="be"> Bases de Pandas
+                    <input type="checkbox" name="data-vizualisation" id="data-vizualisation" value="da"> Bases de SQL
+                    <input type="checkbox" name="challenges" id="challenges" value="ch"> Bases de R
+                </div>
+
+                <label for="textarea">Des commentaires ou suggestions?</label>
+                <textarea name="textarea" id="textarea" cols="100" rows="5"></textarea>
+            </fieldset>
+            <input type="submit" value="Soumettre" id="submit">
+        </form>
+    </div>
+</body>
+
+</html>

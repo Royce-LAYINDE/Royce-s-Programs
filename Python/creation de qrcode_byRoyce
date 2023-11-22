@@ -1,19 +1,20 @@
 #s'assurer d'avoir installer la bibliotheque qrcode avec pip install qrcode
+
 import qrcode
 
-data= 'Voici notre projet de DevOps'
-img = qrcode.make(data)
-img.save('C:/Users/lenovo/Documents/qrcode.png')
+message= 'Voici notre projet de DevOps'
+img = qrcode.make(message)
+img.save('C:/Users/Rab/Documents/Assistant formation professionel/qrJJJJcode.png')
 
-#Qrcode en couleur
+# Qrcode en couleur
 ##s'assurer d'avoir installer la bibliotheque qrcode[pil] avec pip install qrcode[pil]
 
 import qrcode
 
 data= 'Voici notre projet de DevOps'
-qr =qrcode.QRCode(version=1, box_size=10, border=5)
+qr =qrcode.QRCode(version=7, box_size=10, border=5)
 qr.add_data(data)
-qr.make(fit=True)
-img = qr.make_image(fill_color = 'red', back_color = 'blue')
-img.save('C:/Users/lenovo/Documents/qrcodecolore.png')
+# qr.make(fit=True)
+img = qr.make_image(fill_color='black', back_color='green')
+img.save('C:/Users/Rab/Documents/Assistant formation professionel/qrJJJJcode.png')
 
