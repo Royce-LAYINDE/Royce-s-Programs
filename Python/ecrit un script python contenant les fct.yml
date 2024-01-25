@@ -1,0 +1,85 @@
+ecrit un script python contenant les fct suivantes
+- une fct de saisie des info d'un employé 
+- une fct qui crée le fichier d'employé
+- une fct qui affiche la liste des employés 
+- une fct qui transfert le contenu du fichier dans une liste, l'une contenant les employés de sexe masculin et l'autre les employés de sexe féminin 
+- une fct qui recoit une liste et affiche son contenu
+- une fct qui determine et affiche le nbre d'employés dont le titre est "ingénieur" et le nbre d'employé qui travaille dans le service "administration"
+- une fct qui determine et affiche les employés dont le salaire depasse la moyenne salariale des employés ainsi que leur effectif
+- une fct pour le menu
+
+Matricule_de_solde, Nom, Prenom, fonction, titre , service, date d'embauche, salaire de base, situation matrimoniale
+
+Saisir une dizaine d'employés pour travailler# Fonction de saisie des informations d'un employé
+def saisir_info_employe():
+    matricule = input("Matricule de solde: ")
+    nom = input("Nom: ")
+    prenom = input("Prénom: ")
+    fonction = input("Fonction: ")
+    titre = input("Titre: ")
+    service = input("Service: ")
+    date_embauche = input("Date d'embauche (format JJ/MM/AAAA): ")
+    salaire_base = float(input("Salaire de base: "))
+    situation_matrimoniale = input("Situation matrimoniale: ")
+    
+    return f"{matricule},{nom},{prenom},{fonction},{titre},{service},{date_embauche},{salaire_base},{situation_matrimoniale}\n"
+
+# Fonction qui crée le fichier d'employés
+def creer_fichier_employes(employes):
+    with open("employes.txt", "w") as fichier:
+        fichier.writelines(employes)
+
+# Fonction qui affiche la liste des employés
+def afficher_liste_employes(employes):
+    for employe in employes:
+        print(employe)
+
+# Fonction qui transfère le contenu du fichier dans deux listes
+def transfert_sexe(employes):
+    hommes = [employe for employe in employes if employe.split(',')[4].lower() == "homme"]
+    femmes = [employe for employe in employes if employe.split(',')[4].lower() == "femme"]
+    return hommes, femmes
+
+# Fonction qui affiche le contenu d'une liste
+def afficher_contenu_liste(liste):
+    for element in liste:
+        print(element)
+
+# Fonction qui détermine et affiche le nombre d'ingénieurs et d'employés dans le service "administration"
+def stats_titre_service(employes):
+    ing_count = len([employe for employe in employes if employe.split(',')[4].lower() == "ingénieur"])
+    admin_count = len([employe for employe in employes if employe.split(',')[5].lower() == "administration"])
+    
+    print(f"Nombre d'ingénieurs: {ing_count}")
+    print(f"Nombre d'employés dans le service 'administration': {admin_count}")
+
+# Fonction pour le menu
+def menu():
+    employes = []
+
+    # Saisir une dizaine d'employés
+    for _ in range(10):
+        employes.append(saisir_info_employe())
+
+    # Créer le fichier d'employés
+    creer_fichier_employes(employes)
+
+    # Lire le fichier d'employés
+    with open("employes.txt", "r") as fichier:
+        lignes = fichier.readlines()
+
+    # Afficher la liste des employés
+    afficher_liste_employes(lignes)
+
+    # Transférer le contenu du fichier dans deux listes
+    hommes, femmes = transfert_sexe(lignes)
+    print("\nHommes:")
+    afficher_contenu_liste(hommes)
+    print("\nFemmes:")
+    afficher_contenu_liste(femmes)
+
+    # Afficher le nombre d'ingénieurs et d'employés dans le service "administration"
+    stats_titre_service(lignes)
+
+# Appeler le menu
+menu()
