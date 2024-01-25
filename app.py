@@ -1,46 +1,54 @@
 import streamlit as st
 import pandas as pd
 
-# Chargement des jeux de données extraits avec web scrapper et beautifulSoup
-df_webscraper_voitures = pd.read_csv('voitures_a_vendre_data.csv')  
+# Chargement des jeux de données scrappées grace à webscrapper et beautifulSoup
+df_webscraper_voitures = pd.read_csv('motos_scooters_a_vendre_data.csv')
 df_webscraper_motos = pd.read_csv('motos_scooters_a_vendre_data.csv')
-df_webscraper_equipment = pd.read_csv('equipements-pieces_a_vendre_data.csv')
+df_webscraper_equipment = pd.read_csv('motos_scooters_a_vendre_data.csv')
 
-# df_beautifulsoup_voitures = pd.read_csv('voitures_a_vendre_data.csv')
-# df_beautifulsoup_motos = pd.read_csv('motos_scooters_a_vendre_data.csv')  
-# df_beautifulsoup_equipment = pd.read_csv('equipements-pieces_a_vendre_data.csv')  
- 
+df_beautifulsoup_voitures = pd.read_csv('voitures_a_vendre_data.csv')
+df_beautifulsoup_motos = pd.read_csv('motos_scooters_a_vendre_data.csv')
+df_beautifulsoup_equipment = pd.read_csv('equipements-pieces_a_vendre_data.csv')
 
-# Initialisation de l'nterface utilisateur
+# Logo
+logo = 'Logo_DIT.png'
+st.image(logo, width=200) 
+
+
+# Page d'accueil
 st.title("Banque de données scrappées sur le site Expats Dakar")
+choix = st.radio("Choisissez la méthode de scrapping :", ("WebScrapper", "BeautifulSoup"))
 
-# Création des boutons pour télécharger les données
+# Si l'utilisateur choisit BeautifulSoup
+if choix == "BeautifulSoup":
+    choix_catégorie = st.selectbox("Choisissez la catégorie de données :", ("Voitures", "Motos", "Équipements"))
 
-# Boutons pour accéder aux données scrappées avec Web scrapper
-if st.button("Accéder aux données scrappées avec Web Scrapper"):
-    st.subheader("Sélectionnez sur quoi voulez-vous avoir un jeu de données")
-    options = ['Voitures', 'Motos', 'Equipements']
-    choix = st.selectbox('', options)
-    if choix == "Voitures":
-        st.write(df_webscraper_voitures)
-    if choix == "Motos":
-        st.write(df_webscraper_motos)
-    if choix == "Equipements":
-        st.write(df_webscraper_equipment)
+    # Affiche les données en fonction de la catégorie
+    if choix_catégorie == "Voitures":
+        st.write("Données scrappées avec BeautifulSoup sur des Voitures")
+        st.dataframe(df_beautifulsoup_voitures)
 
+    elif choix_catégorie == "Motos":
+        st.write("Données scrappées avec BeautifulSoup sur des Motos")
+        st.dataframe(df_beautifulsoup_motos)
 
-# Boutons pour accéder aux données scrappées avec Beautiful Soup
-# if st.button("Accéder aux données scrappées avec Beautiful Soup"):
-#     st.subheader("Sélectionnez sur quoi voulez-vous avoir un jeu de données")
-#     options = ['Voitures', 'Motos', 'Equipements']
-#     choix_bs = st.selectbox('', options)
-#     if choix_bs == "Voitures":
-#         st.write(df_beautifulsoup_voitures)
-#     elif choix_bs == "Motos":
-#         st.write(df_beautifulsoup_motos)
-#     elif choix_bs == "Équipements":
-#         st.write(df_beautifulsoup_equipment)
+    elif choix_catégorie == "Équipements":
+        st.write("Données scrappées avec BeautifulSoup - Équipements")
+        st.dataframe(df_beautifulsoup_equipment)
 
-# Bouton pour visualiser des graphes sur le jeu de données Beautiful Soup
-if st.button("Visualiser des graphes sur le jeu de données Beautiful Soup"):
-    st.subheader("Graphes sur le jeu de données Beautiful Soup")
+# Si l'utilisateur choisit WebScrapper
+else:
+    choix_catégorie1 = st.selectbox("Choisissez la catégorie de données :", ("Voitures", "Motos", "Équipements"))
+
+    # Affiche les données en fonction de la catégorie
+    if choix_catégorie1 == "Voitures":
+        st.write("Données scrappées avec webscraper sur des Voitures")
+        st.dataframe(df_webscraper_voitures)
+
+    elif choix_catégorie1 == "Motos":
+        st.write("Données scrappées avec webscraper sur des Motos")
+        st.dataframe(df_webscraper_motos)
+
+    elif choix_catégorie1 == "Équipements":
+        st.write("Données scrappées avec webscraper - Équipements")
+        st.dataframe(df_webscraper_equipment)
