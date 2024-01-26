@@ -1,6 +1,6 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 import pandas as pd
-from matplotlib import pyplot as plt
 
 # Chargement des jeux de données scrappées grâce à WebScrapper et BeautifulSoup
 df_webscraper_voitures = pd.read_csv('expatdakar-voitures.csv')
