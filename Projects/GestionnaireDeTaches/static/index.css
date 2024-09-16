@@ -1,0 +1,174 @@
+/* Styles généraux pour tous les écrans */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* Media Queries pour les écrans de petite taille (téléphones) */
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    /* Bouton d'ajout de tâches */
+    form button {
+        background-color: #A6A121;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    /* header */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #B2B195;
+    }
+    .titletext{
+        width: 111px;
+        height: 19px;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 800;
+        font-size: 16px;
+        text-align: center;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    /* main */
+    main {
+        padding: 20px;
+    }
+    /* hero(accueil) */
+    .hero{
+        background: #A6A121;
+        border-radius: 12px;
+        align-items: center;
+        display: flex;
+        margin-top: 5%;
+        position: relative
+    }
+    .hero-text{
+    position: relative;
+    padding-left: 20px;
+    
+    }
+    .avatar{
+        margin-top: -10%;
+        width: 300px; 
+        height: auto;
+        position: relative;
+        margin-left: -35px;
+    }
+    .hello{
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+    } 
+    .bienvenue{
+        width: 206px;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.55);
+    }
+    /* progression  */
+    .progres-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin-top: 5%;
+    }
+    .progres-text{ 
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.03em;
+        color: #000000;
+    }
+    /* liste des tâches  */
+    .liste-taches{
+        display: flex;
+        flex-direction: column; /* Modifier la direction en colonne */
+        background: rgba(178, 177, 149, 0.37);
+        border-radius: 12px;
+        margin-top: 5%;
+
+    }
+    .liste-header{
+        display: flex;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .liste-header-text{
+        position: relative;
+        font-family: 'Inter';
+        font-style: italic;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.03em;
+        color: #000000;
+        margin-right: 16.5rem;
+    }
+    .filter{
+        padding-top: 10px;
+    }
+    .tache{
+        background: #a6a121;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        padding: 10px;  
+    }
+    .enteteTache{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .checkETnom{
+        display: flex;
+        align-items: center;    
+    }
+
+    .titreTache{
+    font-family: 'Inter';
+    font-style: normal;
+    margin-left: 15px;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+   
+
+    }
+    .descriptionTache{
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 19px;
+        color: rgba(255, 255, 255, 0.91);
+
+    }
+
+
+
+    /* footer  */
+
+}
+
+
